@@ -1,0 +1,23 @@
+//select all filter buttons and filter card
+
+const filterButtons = document.querySelectorAll(".filter_buttons button");
+const filterableCards = document.querySelectorAll(".filterable_cards .card");
+
+//iterate over each filterable card
+
+const filtercards = e => {
+    document.querySelector(".active").classList.remove("active")
+    e.target.classList.add("active");
+
+    filterableCards.forEach(card => {
+
+        card.classList.add("hide")
+
+        if(card.dataset.name === e.target.dataset.name || e.target.dataset.name === "all") {
+            card.classList.remove("hide")
+        }
+    }) 
+    
+}
+
+filterButtons.forEach(button => button.addEventListener("click", filtercards ));
