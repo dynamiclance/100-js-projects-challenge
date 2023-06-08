@@ -111,10 +111,3 @@ setCategories = () => {
 
 setCategories()
 
-
-// const fruits = ["apple", "banana", "orange", "cocunut", "apple"];
-
-// fruits.filter((item,index) => {
-//     console.log(fruits.indexOf(item))
-// })
-
